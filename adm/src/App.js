@@ -1,10 +1,18 @@
 import React from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
+import {Dashboard} from './pages/Dashboard';
+import {Listar} from './pages/Listar'
 
 function App() {
   return (
     <div>
-      <h1>Admin</h1>
+      <Router>
+        <Switch> 
+          <Route exact path="/" component={Dashboard} />
+          <Route exact path="/listar" component={Listar} />
+        </Switch>
+      </Router>
     </div>
   );
 }
