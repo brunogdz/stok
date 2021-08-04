@@ -2,7 +2,9 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import {Dashboard} from './pages/Dashboard';
-import {Listar} from './pages/Listar'
+import {Listar} from './pages/Listar';
+import {Visualizar} from './pages/Visualizar';
+import {Cadastrar} from './pages/Cadastrar';
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
         <Switch> 
           <Route exact path="/" component={Dashboard} />
           <Route exact path="/listar" component={Listar} />
+          <Route exact path="/visualizar" component={Visualizar} />
+          <Route exact path="/cadastrar" component={Cadastrar} />
         </Switch>
       </Router>
     </div>
